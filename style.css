@@ -227,16 +227,13 @@
     justify-content: center;
     margin: 0.3125em;
     z-index:0;
-    top:50vh;
     left:25vw;
-    transform:translate(-50%,-50%);
   }
 
   /*This tells the images inside the frame what they should do*/
   .frame img {
     width:100%;
-    height:auto;
-    transform:translate(50%,50%);
+    height:100%;
   }
 
 
