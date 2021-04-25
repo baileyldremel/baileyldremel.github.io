@@ -1,0 +1,334 @@
+/*GENERAL CSS STUFF*/
+
+  * {
+    padding: 0;
+    margin:0;
+  }
+
+  /* Loading the typeface for the document */
+  @font-face {
+    font-family: Raleway;
+    src: url(fonts/RalewayVariableFont.ttf);
+  }
+
+  @font-face {
+    font-family: Nilland;
+    src: url(fonts/Nilland-ExtraBold.ttf);
+  }
+
+  /*Setting the typeface for the document, as well as the size, weight and background colour of the page */
+  body{
+    font-family: "Raleway", "Arial", sans-serif;
+    font-weight: 200;
+    font-size: 1em;
+    background-color:#ffffe3;
+    -webkit-animation:fadein 1s;
+  }
+
+  /*Fade in animation: I found the code to do it here: https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load*/
+  @-webkit-keyframes fadein {
+    from {opacity:0;}
+    to {opacity:1;}
+  }
+/*LINKS AND HEADERS*/
+
+  /*Setting up the style for the links*/
+  a {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+  }
+
+  /*What the links do on hover*/
+  a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  a:visited{
+    color:#006e0f;
+    font-weight: bolder;
+  }
+
+  /*All of these settings are for the header*/
+  /*The settings for the navbar up the top of the page.*/
+  a.navbar {
+    padding: 1vw;
+  }
+
+  header {
+    /* For some reason, when I have the position fixed, it moves the bar down. */
+    /*It only happens on some pages and not others. I'm just going to comment it our while I work on other stuff*/
+    position: fixed;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: visible;
+    width: 100%;
+    z-index: 1;
+    transition: 0.5s;
+    font-size:1.2em;
+  }
+
+  header:hover {
+    background-color: inherit;
+  }
+
+  header img {
+    width:5vw;
+  }
+
+/*HEADINGS AND TEXT*/
+
+  h1,
+  h2,
+  h4,
+  h5,
+  h6 {
+    font-family: "Nilland", "Arial", sans-serif;
+  }
+
+  h1 {
+    font-size:8vw;
+    margin:3vw 0;
+    padding:0;
+  }
+
+  h2{
+    font-size:5vw;
+  }
+
+  h3{
+    font-size:4vw;
+
+  }
+
+  p {
+    padding-top: 0.5vh;
+    font-size: 1.5vw;
+  }
+
+  hr {
+    opacity:0;
+    height:8vh;
+  }
+
+
+/*LIST SETTINGS*/
+
+  ul.timeline{
+    list-style-type:none;
+    font-size: 2vw;
+    padding-right: 1vw;
+    padding-top: 1vw;
+    max-height: 50vh;
+    min-width: 30vw;
+    overflow-y:scroll;
+  }
+
+  li h3 {
+      margin: 0.1em 0.2em;
+  }
+
+  li{
+    margin: 1vw;
+  }
+
+
+
+/*HOMEPAGE CONTENT*/
+
+
+  /*This class will postion whatever is inside to the center(ish) of the screen*/
+  /*Centered code adapted from here: https://www.w3.org/Style/Examples/007/center.en.html*/
+
+  .centered {
+    /*These lines of code move everything that is in the class to the center of the screen*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform:translateY(12vh);
+    padding:0em 1em;
+  }
+
+  /*This code creates a circle 100px wide and high*/
+  .circle {
+    height: 100px;
+    width: 100px;
+    /*The transition gradually changes the width and height back to it's default state rather than snapping it back to the default state*/
+    transition: width 0.5s, height 0.5s;
+    border-radius:50%;
+    background-color:#b3ffb5;
+    margin: 0.5em;
+    font-size: 1.25em;
+  }
+
+  /*What they circles do when you hover over them*/
+  .circle:hover {
+    height:150px;
+    width:150px;
+    background-color: #ffffb5;
+    text-decoration: underline;
+  }
+
+  /*What the circles will be inside*/
+  .flexbox-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position:absolute;
+    top: 65%;
+    left: 50%;
+    width:100%;
+  }
+
+/*OTHER PAGES CONTENT*/
+/*Setting up columns for use later on*/
+/*Anything commented out will be used lateron. Just so I know what I have and haven't used*/
+
+  [class*="col-"] {
+    display: block;
+    float:left;
+    overflow: visible;
+    box-sizing: border-box;
+  }
+
+  .col-1,
+  .col-2 {
+    width:50%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .row::after{
+    content: "";
+    clear: both;
+    display:table;
+  }
+
+
+/*WORK PAGE CSS*/
+
+  /*Creating a box that can contain the links to the work pages. This is on the right of the page*/
+  .work {
+    margin-top: -50px;
+    position: absolute;
+    left:50vw;
+    padding-right:0.5em;
+    text-align:left;
+    font-size: 10vw;
+  }
+
+  /*This is a frame for which the images can sit into. It is set up so that it is on the lefthand side of the page in the center.*/
+  .frame {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0.3125em;
+    z-index:0;
+    top:50vh;
+    left:25vw;
+    transform:translate(-50%,-50%);
+  }
+
+  /*This tells the images inside the frame what they should do*/
+  .frame img {
+    width:100%;
+    height:auto;
+    transform:translate(50%,50%);
+  }
+
+
+/*I do not know for the life of me why this happens but any max-width number below 980px will flat out ignore that is going on in here.*/
+/*I have no idea why this is the case and have tried everything in my power to bring it to a lower number but this is being stubborn and not letting me do it. It works for everything else, but not here. */
+@media only screen and (max-width: 980px) {
+
+      [class*="col-"] {
+        width: 100%;
+      }
+
+      /*Text related changes*/
+      h1 {
+        font-family: "Nilland", "Arial", sans-serif;
+        font-size:5em;
+        margin:1vw 0;
+        padding:0;
+      }
+
+      h2{
+        font-size:5em;
+        text-align: center;
+      }
+
+      h3{
+        font-size:4em;
+      }
+
+      p {
+        padding-top: 0.5vh;
+        font-size: 2em;
+      }
+
+      /*Header related changes*/
+      a.navbar {
+        position:relative;
+        width:100%;
+      }
+
+      header {
+        width: 100%;
+        font-size: 3vw;
+        min-height:10vh;
+        z-index: 1;
+        opacity: 1;
+        transition: 0.5s;
+        box-sizing: content-box;
+      }
+
+      header img {
+        width:10vw;
+        min-width: 50px;
+      }
+
+      ul.timeline{
+        overflow-y:visible;
+      }
+
+      /*Page content related changes*/
+      .centered {
+        /*These lines of code move everything that is in the class to the center of the screen*/
+        transform:translateY(8vh);
+
+      }
+
+      .frame {
+        float:none;
+        display: flex;
+        align-content: flex-end;
+        height:15vh;
+        justify-content:flex-end;
+      }
+
+      #image {
+        height:100%;
+        align-self: center;
+        width:auto;
+      }
+
+      .circle {
+        height: 100px;
+        width: 100px;
+      }
+}
+
+@media only screen and (max-width: 480px) {
+      [class*="col-"] {
+        text-align: right;
+      }
+
+      .circle {
+        height: 80px;
+        width: 80px;
+      }
+}
