@@ -275,7 +275,7 @@
 
       header {
         width: 100%;
-        font-size: 3vw;
+        font-size: 4vw;
         min-height:10vh;
         z-index: 1;
         opacity: 1;
@@ -285,7 +285,7 @@
 
       header img {
         width:10vw;
-        min-width: 50px;
+        min-width: 70px;
       }
 
       ul.timeline{
@@ -302,9 +302,9 @@
       .frame {
         float:none;
         display: flex;
-        align-content: flex-end;
+        align-content: center;
         height:15vh;
-        justify-content:flex-end;
+        justify-content:center;
       }
 
       #image {
