@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face{
+    font-family: DMSans-Regular;
+    src:url(fonts/DMSans-Regular.ttf);
+}
+
+@font-face{
+    font-family: DMSans-Medium;
+    src:url(fonts/DMSans-Medium.ttf);
+}
+
+@font-face{
+    font-family: DMSans-Italic;
+    src:url(fonts/DMSans-Italic.ttf);
+}
+
+body{
+    font-family: "DMSans-Regular", "Arial", sans-serif;
+    font-weight: 100;
+    font-size: 2vh;
+    padding:1vh;
+    background-color: #EDEDED;
+}
+
+.center {
+    /*These lines of code move everything that is in the class to the center of the screen*/
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding:0vh, 1vh;
+  }
+
+.textbox{
+    max-width: 75vw;
+    min-width: 50vw;
+}
+
+.links{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    text-align: center;
+}
+
+a {
+    font-family: "DMSans-Italic","Arial",sans-serif;
+    font-size: 3vh;
+    color: #039e00;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:visited{
+    color:#4d4d4d;
+    text-decoration: underline;
+}
+
+.links a{
+    margin: 1vw;
+}
+
+p{
+    padding-bottom: 1vh;
+}
+
+h1{
+    font-family: "DMSans-Medium", "Arial", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 1em;
+    
+}
